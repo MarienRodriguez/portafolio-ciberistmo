@@ -1,0 +1,187 @@
+/* SECCIONES: el diseño de cada parte de la página, en el orden en que aparecen. */
+
+h2{display:flex;align-items:center;gap:.6rem;margin-bottom:1.1rem;font-size:1.7rem}
+
+/* ---------- Menú ---------- */
+.barra-menu{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-bottom:1.4rem}
+.logo{display:flex;align-items:center;gap:.7rem;margin-right:auto;font-family:Marcellus,serif;font-size:1.5rem}
+.logo i{
+  display:grid;place-items:center;width:2.6rem;height:2rem;
+  border:1px solid var(--rosa);border-radius:.6rem;
+  font:500 .9rem "Fira Code",monospace;color:var(--rosa);
+}
+.barra-menu nav{display:flex;flex-wrap:wrap;gap:1.3rem}
+.barra-menu nav a{color:var(--texto);text-decoration:none;font-size:.95rem}
+.barra-menu nav a:hover{color:var(--rosa)}
+
+/* ---------- Portada ---------- */
+.portada {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Texto a la izquierda, computadora a la derecha */
+  align-items: center;
+  gap: 3rem;
+  padding: 2.4rem 1.6rem;
+}
+
+/* Asegurar que en pantallas pequeñas la computadora baje solita */
+@media(max-width: 48rem) {
+  .portada {
+    grid-template-columns: 1fr; /* Una sola columna en celulares */
+  }
+}
+.etiqueta{
+  display:inline-block;margin-bottom:1rem;padding:.25rem .9rem;
+  border:1px solid rgba(255,179,138,.45);border-radius:.7rem;background:rgba(255,255,255,.04);
+  font-size:.85rem;color:var(--crema);
+}
+.portada h1{margin-bottom:.7rem;font-size:clamp(2.6rem,8vw,4.4rem);line-height:1.05}
+.nombre{
+  background:linear-gradient(90deg,var(--rosa),var(--durazno));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 18px rgba(255,130,150,.45));
+}
+.subtitulo{margin:0 0 1rem;font-family:Marcellus,serif;font-size:1.35rem}
+.palabra-cambiante{color:var(--rosa);text-shadow:0 0 16px rgba(255,110,190,.65)}
+.cursor{display:inline-block;width:2px;height:1.1em;margin-left:.3rem;vertical-align:-.15em;background:var(--rosa);animation:parpadeo 1s steps(2) infinite}
+.intro{max-width:30rem;margin:0 0 1.6rem;color:var(--texto-suave)}
+.botones{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem}
+.redes{display:flex;gap:.7rem;margin-top:1.4rem}
+.redes a{
+  display:grid;place-items:center;width:2.8rem;height:2.8rem;
+  border:1px solid var(--rosa);border-radius:50%;background:rgba(255,255,255,.03);
+  color:var(--texto);text-decoration:none;font-size:.9rem;font-weight:600;
+}
+.redes a:hover{background:var(--rosa);color:var(--oscuro)}
+
+/* Ilustración de la computadora */
+.escenario{position:relative;min-height:24rem}
+.orbita{
+  position:absolute;inset:2% 0 18% 10%;
+  border:2px solid transparent;border-top-color:var(--rosa);border-left-color:rgba(255,122,198,.35);border-radius:50%;
+  transform:rotate(-14deg);filter:drop-shadow(0 0 8px rgba(255,110,190,.7));
+}
+.computadora{
+  position:absolute;top:4%;left:0;right:0;margin:0 auto;width:min(94%,24rem);
+  filter:drop-shadow(0 0 26px rgba(255,130,150,.5));animation:flotar 6s ease-in-out infinite;
+}
+
+.linea-codigo{transform-box:fill-box;transform-origin:left center;animation:escribir 5s ease-in-out infinite}
+.cursor-pantalla{animation:parpadeo 1s steps(2) infinite}
+
+/* ---------- Cuadrícula de bloques ---------- */
+.cuadricula{display:grid;gap:1.2rem;margin-top:1.2rem}
+@media(min-width:56rem){
+  .cuadricula{grid-template-columns:repeat(12,1fr)}
+  .col-5{grid-column:span 5}
+  .col-7{grid-column:span 7}
+  .col-12{grid-column:span 12}
+}
+
+/* Cuadros de datos destacados */
+.datos{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;padding:.3rem 0 .6rem}
+@media(min-width:48rem){.datos{grid-template-columns:repeat(4,1fr)}}
+.cuadro{display:flex;flex-direction:column;justify-content:center;gap:.15rem;min-height:7.5rem;padding:1rem;border:1px solid var(--borde);border-radius:1rem}
+.cuadro b{
+  font:400 1.9rem/1.1 Marcellus,Georgia,serif;
+  background:linear-gradient(90deg,var(--rosa),var(--durazno));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.cuadro span{font-size:.9rem;color:var(--texto-suave)}
+
+/* ---------- Sobre mí ---------- */
+.sobre-mi-contenido{display:grid;gap:1.4rem}
+@media(min-width:40rem){.sobre-mi-contenido{grid-template-columns:1fr 11rem}}
+.sobre-mi-contenido p{margin:0 0 1rem}
+.cita{font-family:Marcellus,serif;font-size:1.15rem;font-style:italic;color:var(--durazno)}
+.mini-ventana{
+  align-self:start;
+  min-height:8rem;padding:.7rem .9rem;border:1px solid var(--borde);border-radius:.8rem;
+  background:linear-gradient(145deg,rgba(255,170,220,.16),transparent);
+  font:500 .85rem "Fira Code",monospace;color:var(--rosa);
+}
+.terminal-texto{white-space:pre-wrap;line-height:1.8}
+.terminal-texto::after{
+  content:"";display:inline-block;width:.5em;height:1em;margin-left:2px;vertical-align:-.15em;
+  background:var(--durazno);animation:parpadeo 1s steps(2) infinite;
+}
+.puntos{display:flex;gap:.4rem;margin-bottom:.7rem}
+.puntos span{width:.65rem;height:.65rem;border-radius:50%;background:var(--rosa);opacity:.85}
+/* Datos rápidos */
+.datos-rapidos{display:grid;gap:.8rem;align-content:center}
+.dato{display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;border:1px solid var(--borde);border-radius:.9rem}
+.dato i{width:2rem;font-size:1.5rem;font-style:normal;text-align:center;color:var(--durazno)}
+.dato small{display:block;color:var(--texto-suave)}
+
+/* ---------- Habilidades ---------- */
+.barra{margin-bottom:.9rem}
+.barra div{display:flex;justify-content:space-between;font-size:.95rem}
+.barra > span{display:block;height:.45rem;margin-top:.25rem;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+.barra i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--rosa),var(--durazno));box-shadow:0 0 10px rgba(255,150,120,.7)}
+.tecnologias-titulo{margin:0}
+.tecnologias{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-top:.6rem}
+.tecnologias span{
+  display:grid;place-items:center;height:3.2rem;
+  border:1px solid var(--borde);border-radius:.7rem;
+  font:500 .78rem "Fira Code",monospace;text-align:center;
+}
+
+/* ---------- Proyectos ---------- */
+.proyectos-lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:.8rem}
+.proyecto{display:flex;flex-direction:column;gap:.35rem;padding:.8rem;border:1px solid var(--borde);border-radius:.9rem}
+.proyecto h3{font-size:1.05rem}
+.proyecto p{flex:1;margin:0;font-size:.85rem;color:var(--texto-suave)}
+.proyecto a{
+  align-self:flex-end;display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;
+  background:linear-gradient(135deg,var(--rosa),var(--durazno));color:var(--oscuro);text-decoration:none;font-weight:600;
+}
+/* Imagen decorativa de cada proyecto (un patrón distinto por tarjeta) */
+.proyecto::before{content:"";display:block;height:4.2rem;border:1px solid var(--borde);border-radius:.6rem}
+.proyecto:nth-child(1)::before{
+  background:
+    radial-gradient(circle at 20% 30%,var(--durazno) 0 3px,transparent 4px),
+    radial-gradient(circle at 55% 68%,var(--rosa) 0 3px,transparent 4px),
+    radial-gradient(circle at 85% 25%,var(--durazno) 0 3px,transparent 4px),
+    linear-gradient(135deg,rgba(255,122,198,.35),rgba(255,179,138,.3));
+}
+.proyecto:nth-child(2)::before{background:repeating-linear-gradient(45deg,rgba(255,179,138,.5) 0 8px,rgba(255,122,198,.3) 8px 16px)}
+.proyecto:nth-child(3)::before{
+  background:
+    repeating-radial-gradient(circle at 72% 50%,rgba(255,179,138,.55) 0 6px,transparent 6px 12px),
+    linear-gradient(135deg,rgba(255,122,198,.4),rgba(40,10,35,.6));
+}
+
+/* ---------- Educación ---------- */
+.linea-tiempo{display:grid;gap:1.1rem;margin-left:.4rem;padding-left:1.8rem;border-left:2px solid var(--rosa)}
+.linea-tiempo div{position:relative}
+.linea-tiempo div::before{
+  content:"";position:absolute;left:-2.28rem;top:.35rem;width:.9rem;height:.9rem;
+  border-radius:50%;background:var(--rosa);box-shadow:0 0 12px var(--rosa);
+}
+.linea-tiempo small{display:block;color:var(--texto-suave)}
+
+/* ---------- Certificaciones ---------- */
+.certificados{display:grid;grid-template-columns:repeat(auto-fit,minmax(8rem,1fr));gap:.8rem}
+.certificado{padding:1rem .5rem;border:1px solid var(--borde);border-radius:.9rem;text-align:center}
+.certificado i{display:block;font-size:1.6rem;font-style:normal;color:var(--durazno)}
+.certificado small{display:block;color:var(--texto-suave)}
+
+/* ---------- Contacto y pie de página ---------- */
+.contacto{display:grid;align-items:center;gap:1.4rem}
+@media(min-width:48rem){.contacto{grid-template-columns:1fr 1fr}}
+.contacto p{margin:0 0 1rem;color:var(--texto-suave)}
+.contacto ul{display:grid;gap:.6rem;margin:0;padding:0;list-style:none}
+.contacto li{display:flex;align-items:center;gap:.8rem}
+.contacto li b{width:2rem;font-weight:600;color:var(--durazno)}
+.pie{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;margin-top:1.2rem;padding:1rem 1.4rem;font-size:.9rem;color:var(--texto-suave)}
+
+/* ---------- Animaciones ---------- */
+@keyframes parpadeo{50%{opacity:0}}
+@keyframes flotar{50%{transform:translateY(-10px)}}
+@keyframes escribir{0%{transform:scaleX(0)}25%,85%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+
+/* Quien prefiere menos movimiento no ve animaciones */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .cursor,.cursor-pantalla,.computadora,.linea-codigo{animation:none}
+  .tarjeta-3d{transition:none}
+}

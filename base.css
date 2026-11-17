@@ -1,0 +1,40 @@
+/* BASE: colores, tipografía y reglas generales.
+   Cambia los colores aquí y se actualiza toda la página. */
+:root{
+  --fondo:#0c0610;
+  --texto:#fbeaf5;
+  --texto-suave:#c9a9bd;
+  --rosa:#ff7ac6;
+  --rosa-claro:#ffa6dc;
+  --durazno:#ffb38a;
+  --crema:#ffd9bf;
+  --oscuro:#2a0a1d;            /* texto sobre botones rosados */
+  --borde:rgba(255,140,200,.38);
+  --cristal:rgba(255,170,220,.06);
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);     /* respeta la muesca del celular */
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0;color:var(--texto);
+  font-family:Outfit,system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:300;line-height:1.6;
+  background:
+    radial-gradient(55rem 28rem at 100% 100%,rgba(255,150,110,.30),transparent 62%),
+    radial-gradient(40rem 24rem at 0 0,rgba(255,110,190,.22),transparent 60%),
+    var(--fondo);
+}
+/* cuadrícula del fondo */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(rgba(255,150,210,.07) 1px,transparent 1px) 0 0/44px 44px,
+    linear-gradient(90deg,rgba(255,150,210,.07) 1px,transparent 1px) 0 0/44px 44px;
+}
+h1,h2,h3{margin:0;font-family:Marcellus,Georgia,serif;font-weight:400}
+a{color:var(--rosa-claro)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--rosa);outline-offset:3px}
+.contenedor{max-width:68rem;margin:0 auto;padding:1rem 1.1rem 2rem}
+.estrella{color:var(--durazno)}

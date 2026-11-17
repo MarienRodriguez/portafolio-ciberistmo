@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marien Rodríguez · Portafolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="componentes.css">
+<link rel="stylesheet" href="secciones.css">
+<link rel="stylesheet" href="iconos.css">
+</head>
+<body>
+<div class="contenedor">
+
+  <!-- Menú -->
+  <div class="panel panel--pildora barra-menu">
+    <div class="logo"><i>&gt;_</i>$whoami</div>
+    <nav aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#educacion">Educación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="boton boton--relleno" href="#contacto">Hablemos <span aria-hidden="true">✦</span></a>
+  </div>
+
+  <main>
+    <!-- Portada -->
+    <section id="inicio" class="panel portada">
+      <div>
+        <span class="etiqueta">Tecnología e Informática</span>
+        <h1>Hola, soy <span class="nombre">Marien Rodríguez</span> <span class="estrella">✦</span></h1>
+        <p class="subtitulo">Apasionada por la tecnología. <span class="palabra-cambiante" id="palabra-cambiante">Estudiante de Bachillerato en Tecnología e Informática</span><span class="cursor"></span></p>
+        <p class="intro">Estudiante de Bachillerato en Tecnología e Informática, interesada en la programación, el desarrollo de software y la exploración del mundo tecnológico. Me apasiona aprender, experimentar y comprender cómo funciona la tecnología. Aspiro a estudiar Ingeniería de Software y seguir descubriendo todo lo que puedo crear a través del código.</p>
+
+        <div class="botones">
+          <a class="boton boton--relleno" href="#proyectos">Ver mis proyectos →</a>
+          <a class="boton" href="CV_Marien_Rodriguez.pdf" download="CV_Marien_Rodriguez.pdf">Descargar CV ↓</a>
+        </div>
+
+        <div class="redes">
+          <a class="github" href="https://github.com/MarienRodriguez" aria-label="GitHub"></a>
+          <a class="discord" href="https://discord.com/users/1353114535837302885" aria-label="Discord"></a>
+          <a class="correo" href="mailto:memimamu76@gmail.com" aria-label="Correo"></a>
+        </div>
+      </div>
+
+      <!-- Dibujo de la computadora (SVG) -->
+      <div class="escenario">
+        <div class="orbita"></div>
+        <svg class="computadora" viewBox="0 0 260 225" role="img" aria-label="Computadora con código en pantalla">
+          <defs>
+            <linearGradient id="degradado" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff7ac6"/><stop offset="1" stop-color="#ffb38a"/>
+            </linearGradient>
+          </defs>
+          <rect x="28" y="8" width="204" height="136" rx="14" fill="rgba(255,150,190,.1)" stroke="url(#degradado)" stroke-width="3"/>
+          <rect x="40" y="20" width="180" height="112" rx="6" fill="rgba(24,6,20,.9)"/>
+          <circle cx="52" cy="31" r="3" fill="#ff7ac6"/><circle cx="62" cy="31" r="3" fill="#ffb38a"/><circle cx="72" cy="31" r="3" fill="#ffd9bf"/>
+          <g fill="url(#degradado)">
+            <rect class="linea-codigo" style="animation-delay:0s"  x="52" y="46"  width="70"  height="6" rx="3"/>
+            <rect class="linea-codigo" style="animation-delay:.4s" x="64" y="60"  width="110" height="6" rx="3"/>
+            <rect class="linea-codigo" style="animation-delay:.8s" x="64" y="74"  width="80"  height="6" rx="3" opacity=".8"/>
+            <rect class="linea-codigo" style="animation-delay:1.2s" x="76" y="88" width="100" height="6" rx="3"/>
+            <rect class="linea-codigo" style="animation-delay:1.6s" x="52" y="102" width="50" height="6" rx="3" opacity=".8"/>
+            <rect class="cursor-pantalla" x="108" y="100" width="5" height="10" fill="#ffd9bf"/>
+          </g>
+          <path d="M108 144 H152 L162 176 H98 Z" fill="url(#degradado)" opacity=".35"/>
+          <rect x="78" y="176" width="104" height="8" rx="4" fill="url(#degradado)"/>
+          <rect x="34" y="192" width="192" height="28" rx="7" fill="rgba(255,150,190,.1)" stroke="#ff7ac6" stroke-width="2"/>
+          <g stroke="#ffb38a" stroke-width="5" stroke-linecap="round" stroke-dasharray="9 6">
+            <line x1="46" y1="201" x2="214" y2="201"/><line x1="50" y1="211" x2="210" y2="211"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <div class="cuadricula">
+
+      <!-- Datos destacados -->
+      <div class="datos col-12" aria-label="Datos destacados">
+        <div class="cuadro tarjeta-3d"><b>Linux</b><span>Entorno de Trabajo</span></div>
+        <div class="cuadro tarjeta-3d"><b>Autodidacta</b><span>En Formación Constante</span></div>
+        <div class="cuadro tarjeta-3d"><b>Diseño Web</b><span>Interfaces y Presentaciones</span></div>
+        <div class="cuadro tarjeta-3d"><b>Python & C++</b><span>Lenguajes de Código</span></div>
+      </div>
+
+      <!-- Sobre mí -->
+      <section id="sobre-mi" class="panel col-7">
+        <h2><span class="estrella">✦</span> Sobre mí</h2>
+        <div class="sobre-mi-contenido">
+          <div>
+            <p>Soy estudiante de Bachillerato en Tecnología e Informática, apasionada por la programación y el desarrollo de software. Me gusta explorar, experimentar y comprender cómo funciona la tecnología. Actualmente continúo aprendiendo y desarrollando mis habilidades con el objetivo de estudiar Ingeniería de Software.</p>
+            <p class="cita">“Ningún sueño es demasiado grande ni ningún soñador demasiado pequeño.”</p>
+          </div>
+          <div class="mini-ventana" aria-hidden="true">
+            <div class="puntos"><span></span><span></span><span></span></div>
+            <div class="terminal-texto" id="terminal-texto"></div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel col-5 datos-rapidos" aria-label="Datos rápidos">
+        <div class="dato tarjeta-3d"><i>🎓</i><div>11vo Grado<small>Tecnología e Informática</small></div></div>
+        <div class="dato tarjeta-3d"><i>📍</i><div>Panamá, Panamá</div></div>
+        <div class="dato tarjeta-3d"><i>♥</i><div>Intereses<small>Programación, Estudio de Software, I.A y S.O</small></div></div>
+      </aside>
+
+      <!-- Habilidades -->
+      <section id="habilidades" class="panel col-5">
+        <h2><span class="estrella">▮</span> Mis habilidades</h2>
+        <div class="barra"><div><span>Programación</span><span>40%</span></div><span><i style="width:40%"></i></span></div>
+        <div class="barra"><div><span>Resolución de problemas</span><span>50%</span></div><span><i style="width:50%"></i></span></div>
+        <div class="barra"><div><span>Trabajo en equipo</span><span>70%</span></div><span><i style="width:70%"></i></span></div>
+        <div class="barra"><div><span>Creatividad</span><span>85%</span></div><span><i style="width:85%"></i></span></div>
+        <p class="tecnologias-titulo">Tecnologías que uso</p>
+        <div class="tecnologias">
+          <span class="tarjeta-3d">Python</span><span class="tarjeta-3d">C++</span><span class="tarjeta-3d">HTML</span><span class="tarjeta-3d">CSS</span>
+          <span class="tarjeta-3d">Linux</span><span class="tarjeta-3d">GitHub</span><span class="tarjeta-3d">VS Code</span><span class="tarjeta-3d">JS</span>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section id="proyectos" class="panel col-7">
+        <h2><span class="estrella">▣</span> Mis proyectos</h2>
+        <div class="proyectos-lista">
+          <div class="proyecto tarjeta-3d"><h3>Sistema de Evaluación de Élite (Python)</h3><p>Desarrollé un script interactivo en Python utilizando bucles while, condicionales y validación de tipos (int, float) para filtrar y evaluar perfiles según edad y calificaciones de forma dinámica.</p><a href="https://github.com/MarienRodriguez/Python_1/blob/main/quiz_corregido.py" aria-label="Abrir proyecto 1">→</a></div>
+          <div class="proyecto tarjeta-3d"><h3>Portafolio Web Personal (HTML, JS & CSS)</h3><p>Creé este portafolio con estética bento oscura, usando IA como apoyo para estructurar y personalizar la interfaz con HTML, CSS, JS y UI.</p><a href="#" aria-label="Abrir proyecto 2">→</a></div>
+          <div class="proyecto tarjeta-3d"><h3>Prácticas y Lógica de Programación (C++ / Python)</h3><p>Reúno aquí mis prácticas de código, manejo de consola y aprendizaje en C++ y Python. Es mi espacio en GitHub donde documento mi evolución lógica y mis primeros pasos en el desarrollo de software.</p><a href="https://github.com/MarienRodriguez/c-plus-and-python" aria-label="Abrir proyecto 3">→</a></div>
+        </div>
+      </section>
+
+      <!-- Educación -->
+      <section id="educacion" class="panel col-5">
+        <h2><span class="estrella">🎓</span> Educación</h2>
+        <div class="linea-tiempo">
+          <div><strong>Bachiller en Tecnología e Informática</strong><small>Instituto Comercial Panamá</small><small>2025 (Finalizado) 2026 (Actual) 2027 (Próximo)</small></div>
+          <div><strong>META🎯</strong><small>Ingeniería de Software (UTP) 2028</small></div>
+        </div>
+      </section>
+
+      <!-- Áreas de Interés -->
+      <section class="panel col-7" aria-label="Áreas de Interés">
+        <h2><span class="estrella">✦</span> Áreas de Interés</h2>
+        <div class="areas-interes">
+          <div class="certificado tarjeta-3d"><i>💻</i>Desarrollo Web<small>🎯</small></div>
+          <div class="certificado tarjeta-3d"><i>🛡️</i>Seguridad Informática<small>🎯</small></div>
+          <div class="certificado tarjeta-3d"><i>⚙️</i>Desarrollo de Software<small>🎯</small></div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contacto" class="panel col-12 contacto">
+        <div>
+          <h2>Trabajemos juntos <span class="estrella">✦</span></h2>
+          <p>Escríbeme si quieres colaborar, compartir ideas o aprender juntos.</p>
+          <a class="boton" href="https://wa.me/50761615566">Contáctame 📱</a>
+        </div>
+        <ul>
+          <li><b>@</b>memimamu76@gmail.com</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <div class="panel panel--pildora pie">
+    <span>© 2026 Marien Rodríguez. Portafolio.</span>
+    <span>Aprendizaje constante <span class="estrella">✦</span> Crecimiento real</span>
+  </div>
+</div>
+
+<script src="palabras.js" defer></script>
+</body>
+</html>

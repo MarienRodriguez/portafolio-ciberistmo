@@ -1,0 +1,40 @@
+/* COMPONENTES: piezas que se repiten en toda la página. */
+
+/* Panel de cristal con esquinas rosa (arriba) y durazno (abajo) */
+.panel{
+  position:relative;padding:1.6rem;
+  background:var(--cristal);border:1px solid var(--borde);border-radius:1.2rem;
+  box-shadow:0 0 30px rgba(255,110,190,.12),inset 0 0 40px rgba(255,140,200,.05);
+  backdrop-filter:blur(6px);
+}
+.panel::before,.panel::after{content:"";position:absolute;width:30px;height:30px;opacity:.65;pointer-events:none}
+.panel::before{top:10px;right:10px;border:solid var(--rosa);border-width:2px 2px 0 0;border-radius:0 12px 0 0}
+.panel::after{bottom:10px;left:10px;border:solid var(--durazno);border-width:0 0 2px 2px;border-radius:0 0 0 12px}
+
+/* Variante en forma de píldora, sin esquinas (menú y pie de página) */
+.panel--pildora{padding:.8rem 1.2rem;border-radius:99px}
+.panel--pildora::before,.panel--pildora::after{display:none}
+
+/* Botones */
+.boton{
+  display:inline-block;padding:.7rem 1.4rem;
+  border:1px solid var(--rosa);border-radius:99px;
+  color:var(--texto);text-decoration:none;font-weight:500;
+}
+.boton:hover{filter:brightness(1.12)}
+.boton--relleno{
+  background:linear-gradient(90deg,var(--rosa),var(--durazno));
+  color:var(--oscuro);border-color:transparent;box-shadow:0 0 22px rgba(255,150,120,.45);
+}
+
+/* Efecto casi 3D: agrega la clase "tarjeta-3d" a cualquier cuadro */
+.tarjeta-3d{
+  background:linear-gradient(145deg,rgba(255,179,138,.16),rgba(255,122,198,.07) 55%,rgba(24,6,20,.7));
+  box-shadow:3px 3px 0 rgba(255,122,198,.40),6px 6px 0 rgba(255,179,138,.24),10px 14px 20px rgba(0,0,0,.4);
+  transform:perspective(700px) rotateX(7deg) rotateY(-9deg);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.tarjeta-3d:hover{
+  box-shadow:5px 5px 0 rgba(255,122,198,.55),10px 10px 0 rgba(255,179,138,.32),14px 20px 26px rgba(0,0,0,.4);
+  transform:perspective(700px) rotateX(0) rotateY(0) translate(-3px,-5px);
+}
